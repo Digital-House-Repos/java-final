@@ -1,6 +1,6 @@
 # Examen Final Java POO
 
-Exmaen Final de la materia de POO Digital House, camada 2.
+Examen Final de la materia de POO - Digital House, camada 2.
 
 ## Integrantes
 
