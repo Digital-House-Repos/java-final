@@ -14,15 +14,18 @@ public class PizzaCombinada extends Pizza {
     }
 
     // Methods
-    public void agregarPizza(Pizza pizza) {
+    public void agregarPizza(Pizza pizza) throws RuntimeException {
         if (this.listaPizzas.isEmpty()) {
             this.listaPizzas.add(pizza);
-        } else {
+        } else if (this.listaPizzas.size() == 1 && !this.listaPizzas.contains(pizza)) {
             this.listaPizzas.add(pizza);
             this.calcularPrecio();
+        } else {
+            throw new RuntimeException("No se puede agregar mas de 2 pizzas o la pizza ya esta agregada");
         }
-        // Agregar try catch para que no agregue mas de 2 pizzas
     }
+// Agregar try catch para que no agregue mas de 2 pizzas
+
 
     @Override
     public double calcularPrecio() {

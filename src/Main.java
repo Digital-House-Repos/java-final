@@ -13,11 +13,20 @@ public class Main {
         pizza4.agregarPizza(pizza2);
         pizza4.agregarPizza(pizza3);
 
+        // Tratando de añadir mas de 2 pizzas
+        try {
+            pizza4.agregarPizza(pizza2);
+        } catch (RuntimeException e) {
+            System.out.println("Error");
+            System.out.println(e.getMessage());
+            System.out.println();
+        }
+
         pizzeria.agregarPizza(pizza1);
         pizzeria.agregarPizza(pizza2);
         pizzeria.agregarPizza(pizza3);
         pizzeria.agregarPizza(pizza4);
-
         pizzeria.mostrarMenu();
+
     }
 }
