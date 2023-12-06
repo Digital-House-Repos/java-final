@@ -22,7 +22,7 @@ public abstract class Pizza {
     }
 
     // Methods
-    public abstract void calcularPrecio();
+    public abstract double calcularPrecio();
 
     // To String
     @Override

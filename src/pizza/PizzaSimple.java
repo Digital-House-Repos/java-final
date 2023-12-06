@@ -10,16 +10,17 @@ public class PizzaSimple extends Pizza {
         this.precioBase = precioBase;
         this.esEspecial = esEspecial;
 
-        // agregar metodo calcularPrecio() al constructor
+        this.calcularPrecio();
     }
 
     // Methods
     @Override
-    public void calcularPrecio() {
+    public double calcularPrecio() {
         if (this.esEspecial) {
             this.precio = this.precioBase * 1.7;
         } else {
             this.precio = this.precioBase;
         }
+        return this.precio;
     }
 }
