@@ -23,4 +23,14 @@ public class PizzaSimple extends Pizza {
         }
         return this.precio;
     }
+
+    // To String
+    @Override
+    public String toString() {
+        if (this.esEspecial) {
+            return super.toString() + " - Precio base (" + this.precioBase + "$) + 70% (Especial)";
+        } else {
+            return super.toString();
+        }
+    }
 }

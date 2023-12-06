@@ -11,8 +11,6 @@ public class PizzaCombinada extends Pizza {
     public PizzaCombinada(String nombre, String descripcion) {
         super(nombre, descripcion);
         this.listaPizzas = new ArrayList<>();
-
-        this.calcularPrecio();
     }
 
     // Methods
@@ -21,6 +19,7 @@ public class PizzaCombinada extends Pizza {
             this.listaPizzas.add(pizza);
         } else {
             this.listaPizzas.add(pizza);
+            this.calcularPrecio();
         }
         // Agregar try catch para que no agregue mas de 2 pizzas
     }
