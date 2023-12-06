@@ -5,19 +5,19 @@ public class Main {
     public static void main(String[] args) {
         Pizzeria pizzeria = new Pizzeria("La Pizzeria Digital House");
 
-        Pizza pizza1 = new PizzaSimple("Muzzarella", "Muzzarella, tomate y oregano", 700, false);
-        Pizza pizza2 = new PizzaSimple("Margarita", "Margarita, tomate, oregano y ajo", 850, true);
-        Pizza pizza3 = new PizzaSimple("Anana", "Anana, tomate, ajo y oregano", 950, false);
+        PizzaSimple pizza1 = new PizzaSimple("Muzzarella", "Muzzarella, tomate y oregano", 700, false);
+        PizzaSimple pizza2 = new PizzaSimple("Margarita", "Margarita, tomate, oregano y ajo", 850, true);
+        PizzaSimple pizza3 = new PizzaSimple("Anana", "Anana, tomate, ajo y oregano", 950, false);
 
         PizzaCombinada pizza4 = new PizzaCombinada("Combinada loca", "Margarita + Anana");
         pizza4.agregarPizza(pizza2);
         pizza4.agregarPizza(pizza3);
 
         // Tratando de añadir mas de 2 pizzas
+        System.out.println("Tratando de añadir mas de 2 pizzas (Error con mensaje):");
         try {
-            pizza4.agregarPizza(pizza2);
+            pizza4.agregarPizza(pizza3);
         } catch (RuntimeException e) {
-            System.out.println("Error");
             System.out.println(e.getMessage());
             System.out.println();
         }

@@ -13,6 +13,15 @@ public class PizzaSimple extends Pizza {
         this.calcularPrecio();
     }
 
+    // Getter
+    public double getPrecioBase() {
+        return precioBase;
+    }
+
+    public boolean isEsEspecial() {
+        return esEspecial;
+    }
+
     // Methods
     @Override
     public double calcularPrecio() {

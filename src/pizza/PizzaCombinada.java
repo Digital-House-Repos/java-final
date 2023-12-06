@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PizzaCombinada extends Pizza {
-    private List<Pizza> listaPizzas;
+    private List<PizzaSimple> listaPizzas;
 
 
     // Constructor
@@ -14,7 +14,7 @@ public class PizzaCombinada extends Pizza {
     }
 
     // Methods
-    public void agregarPizza(Pizza pizza) throws RuntimeException {
+    public void agregarPizza(PizzaSimple pizza) throws RuntimeException {
         if (this.listaPizzas.isEmpty()) {
             this.listaPizzas.add(pizza);
         } else if (this.listaPizzas.size() == 1 && !this.listaPizzas.contains(pizza)) {
@@ -24,8 +24,6 @@ public class PizzaCombinada extends Pizza {
             throw new RuntimeException("No se puede agregar mas de 2 pizzas o la pizza ya esta agregada");
         }
     }
-// Agregar try catch para que no agregue mas de 2 pizzas
-
 
     @Override
     public double calcularPrecio() {
